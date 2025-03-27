@@ -1,3 +1,5 @@
+// 1) Crie uma classe chamada “Círculo” que possua um atributo para armazenar o raio e métodos para calcular a área e o perímetro do círculo.
+
 class Circulo {
     constructor(raio) {
         this.raio = raio;
@@ -21,13 +23,4 @@ console.log(c1.getArea());
 console.log(c1.getPerimetro());
 
 
-class Aluno {
-    constructor(nome, matricula, nota1 = 0, nota2 = 0){
-        this.nome = nome
-        this. matricula = matricula
-        this.nota1 = nota1
-        this.nota2 = nota2
-    }
 
-    getMedia
-}
