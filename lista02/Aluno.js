@@ -20,7 +20,12 @@ class Aluno {
     }
 }
 
-const a1 = new Aluno('Ryan', 1234, 6, 7);
-let media = a1.calcularMedia();
-console.log(media);
-console.log(a1.verificarSituacao(media));
+const a1 = new Aluno('Ryan', 1234, 10, 8);
+let media1 = a1.calcularMedia();
+console.log(media1);
+console.log(a1.verificarSituacao(media1));
+
+const a2 = new Aluno('Fernando', 4321, 6, 8);
+let media2 = a2.calcularMedia();
+console.log(media2);
+console.log(a2.verificarSituacao(media2));
