@@ -14,10 +14,28 @@ class Autor {
 }
 
 class Livro {
-    constructor(titulo, autor, numeroPaginas) {
+    constructor(titulo, numeroPaginas, autor) {
         this.titulo = titulo;
-        this.autor = [];
         this.numeroPaginas = numeroPaginas;
+        this.autores = [autor];
     }
 
+    addAutor(autor) {
+        this.autores.push(autor);
+    }
+
+    informacoesAutores() {
+        for (const autor of this.autores) {
+            console.log(autor.informacoes());
+        }
+    }
 }
+
+const autor1 = new Autor('João', 'Silva');
+console.log(autor1.informacoes());
+
+const livro1 = new Livro('Livro 1', 100, autor1);
+console.log(livro1);
+
+livro1.addAutor(new Autor('Maria', 'Santos'));
+livro1.informacoesAutores();
