@@ -38,6 +38,7 @@ function maiorMenor(n1, n2, n3) {
     } else {
         menor = n3;
     }
+    console.log(`Maior: ${maior}, Menor: ${menor}`);
 }
 
 /*3) Crie um programa que peça ao usuário um número inteiro positivo n e exiba a
@@ -55,16 +56,17 @@ uma taxa anual de crescimento de 3% e que a população de B seja 200000
 habitantes com uma taxa de crescimento de 1.5%. Faça um programa que calcule
 e escreva o número de anos necessários para que a população do país A
 ultrapasse ou iguale a população do país B, mantidas as taxas de crescimento.*/
-let pA = 80000, tacA = 0.03, pB = 200000, tacB = 0.015;
+
 
 function ultrapassarPopulacao() {
+    let pA = 80000, tacA = 0.03, pB = 200000, tacB = 0.015;
     let anos = 0;
     while (pA < pB) {
         pA += pA * tacA;
         pB += pB * tacB;
         anos++;
     }
-    return anos;
+    console.log(anos);
 }
 
 /*5) Dado o array numeros, crie um novo array chamado numerosUnicos, contendo
@@ -78,9 +80,8 @@ function numerosUnicos() {
             numerosUnicos.push(numero);
         }
     }
+    console.log(numerosUnicos);
 }
-
-console.log(numerosUnicos()); // [3, 7, 2, 10, 15, 20]
 
 /*6) Implemente uma função que recebe como parâmetro um array de números, calcule
 a média aritmética e retorne o resultado.*/
@@ -88,7 +89,7 @@ function mediaAritmetica(arrayNum) {
     let soma = 0;
     for (let i = 0; i < arrayNum.length; i++)
         soma += arrayNum[i];
-    return soma / arrayNum.length
+    console.log(soma / arrayNum.length);
 }
 
 /*7) Desenvolva uma função que verifique se uma palavra é um palíndromo (lê-se da
@@ -96,10 +97,18 @@ function mediaAritmetica(arrayNum) {
     palíndromo e false se não for.*/
 function ehPalindromo(palavra) {
     const invertida = palavra.split('').reverse().join('');
-    return palavra == invertida
+    console.log(palavra == invertida);
     /*if (palavra == invertida) {
         return true
     } else {
         return false
     }*/
 }
+
+testeEscopo();
+maiorMenor(n1, n2, n3);
+tabuada(n1a10);
+ultrapassarPopulacao();
+numerosUnicos();
+mediaAritmetica([7,8,9,10]);
+ehPalindromo('arara')
