@@ -11,13 +11,16 @@ app.get('/', (req, res) => {
     res.render('calculadora');
 });
 
-app.post('/calcular', (req, res) => {
-    const num1 = parseFloat(req.body.num1);
-    const num2 = parseFloat(req.body.num2);
-    const operacao = req.body.operacao;
-    let simbolo = '';
+historico = []
 
-    let resultado = 0;
+
+app.post('/calcular', (req, res) => {
+    num1 = parseFloat(req.body.num1);
+    num2 = parseFloat(req.body.num2);
+    operacao = req.body.operacao;
+    simbolo = '';
+
+    resultado = 0;
 
     switch (operacao) {
         case 'soma':
@@ -40,8 +43,18 @@ app.post('/calcular', (req, res) => {
             console.log('Erro: Operação inválida');
             break;
     }
-    
-    res.render('calcular', { res: resultado, n1: num1, n2: num2, op: operacao , s: simbolo });
+
+    const calculo = {
+        num1,
+        num2,
+        operacao,
+        simbolo,
+        resultado
+    }
+
+    historico.push(calculo)
+
+    res.render('calcular', { history: historico });
 });
 
 app.listen(port, () => {

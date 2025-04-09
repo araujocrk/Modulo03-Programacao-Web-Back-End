@@ -6,6 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Resultado da operação: <%= n1 %> <%= s %> <%= n2 %> = <%= res %></h1>
+    <h2>Resultado da operação: </h2>
+    <!-- history.forEach(function(calculo) { 
+
+    }) -->
+    <h2>Histórico</h2>
+    <table border="1">
+        <tr>
+            <th>Número 1</th>
+            <th>operacao</th>
+            <th>Número 2</th>
+            <th>Resultado</th>
+        </tr>
+        <% history.forEach(function(calculo) { %>
+            <tr>
+                <td><%= calculo.num1 %></td>
+                <td><%= calculo.simbolo %></td>
+                <td><%= calculo.num2 %></td>
+                <td><%= calculo.resultado %></td>
+            </tr>
+        <% }) %>
+    </table>
 </body>
 </html>
