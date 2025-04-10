@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= pagina %> </title>
+</head>
+<body>
+    <h1>Página de Respostas</h1>
+    <table border="1">
+        <tr>
+            <th>Data</th>
+            <th>Código</th>
+            <th>Tipo</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário</th>
+            <th>Valor Bruto</th>
+            <th>Valor Líquido</th>
+        </tr>
+        <% operations.forEach(function(operation) { %>
+            <tr>
+                <td><%= operation.data %></td>
+                <td><%= operation.codigo %></td>
+                <td><%= operation.tipo %></td>
+                <td><%= operation.quantidade %></td>
+                <td><%= operation.precoUnit %></td>
+                <td><%= operation.bruto %></td>
+                <td><%= operation.liquido %></td>
+            </tr>
+        <% }) %>
+    </table>
+    
+</body>
+</html>
