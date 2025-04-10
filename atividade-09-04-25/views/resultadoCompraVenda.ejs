@@ -23,12 +23,14 @@
                 <td><%= operation.codigo %></td>
                 <td><%= operation.tipo %></td>
                 <td><%= operation.quantidade %></td>
-                <td><%= operation.precoUnit %></td>
-                <td><%= operation.bruto %></td>
-                <td><%= operation.liquido %></td>
+                <td><%= operation.precoUnit.toFixed(2) %></td>
+                <td><%= operation.bruto.toFixed(2) %></td>
+                <td><%= operation.liquido.toFixed(2) %></td>
+
             </tr>
         <% }) %>
     </table>
+    <a href="/bolsaDeValores/compraVenda">Voltar</a>
     
 </body>
 </html>
