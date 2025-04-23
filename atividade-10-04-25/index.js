@@ -5,13 +5,14 @@ const port = 3000
 app.set('view engine', 'ejs')
 app.set('views', 'views')
 app.use(express.urlencoded({ extended: false }))
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
     res.render('home')
 })
 
-const routeAlunosRegistro = require('./routes/alunos/registroEhistorico')
-app.use('/alunos', routeAlunosRegistro)
+const routeAluno = require('./routes/aluno')
+app.use('/alunos', routeAluno)
 
 
 app.listen(port, () => {
