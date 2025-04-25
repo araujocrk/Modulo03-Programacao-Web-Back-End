@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/historico.css">
+    <title>Document</title>
+</head>
+<body>
+    <% title = 'Operações' %>
+    <h1>Histórico de operações</h1>
+<table>
+    <tr>
+        <th>Data</th>
+        <th>Código do Ativo</th>
+        <th>Tipo de Operação</th>
+        <th>Quantidade</th>
+        <th>Preço Unitário</th>
+        <th>Valor Bruto</th>
+        <th>Taxas B3</th>
+        <th>Valor Líquido</th>
+    </tr>
+    <% operations.forEach(function(operation) { %>
+        <tr>
+            <td><%= operation.data %></td>
+            <td><%= operation.codigo %></td>
+            <td><%= operation.tipo %></td>
+            <td><%= operation.quantidade %></td>
+            <td><%= operation.precoUnit %></td>
+            <td><%= operation.bruto %></td>
+            <td><%= operation.taxas %></td>
+            <td><%= operation.liquido %></td>
+        </tr>
+   <% }) %>
+</table>
+
+<p>Quer adicionar uma nova operação? <a href="operacoes/mercado">Clique aqui</a></p>
+</body>
+</html>
+
+
