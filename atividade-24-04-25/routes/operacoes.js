@@ -4,11 +4,11 @@ const router = express.Router();
 const operacoes = [];
 
 router.get('/', (req, res) => {
-    res.render('pages/historico', { operations: operacoes});
+    res.render('pages/historico', { operations: operacoes, page : 'operacoes', title : 'Operações' });
 });
 
 router.get('/mercado', (req, res) => {
-    res.render('pages/mercado');
+    res.render('pages/mercado', { page : 'mercado', title : 'Mercado' });
 });
 
 router.post('/', (req, res) => {
@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
 
     operacoes.push({data, codigo, tipo, quantidade, precoUnit, bruto, taxas, liquido});
 
-    res.render('pages/historico', { operations: operacoes});
+    res.render('pages/historico', { operations: operacoes, page : 'operacoes', title : 'Operações' });
 });
 
 module.exports = router;

@@ -1,12 +1,24 @@
+/* Estilizando o Footer */
 .footerDiv {
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
-    padding: 20px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.footerDiv p {
+    margin: 8px 0;
 }
 
 .footerA {
-    padding: 14px 16px;
+    color: #04AA6D;
+    padding: 0 8px;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.footerA:hover {
+    text-decoration: underline;
 }

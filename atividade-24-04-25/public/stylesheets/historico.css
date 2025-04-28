@@ -42,11 +42,11 @@ tr:hover {
 }
 
 /* Link para adicionar nova operação */
-a {
+.newOp {
     color: #04AA6D;
     text-decoration: none;
 }
 
-a:hover {
+.newOp:hover {
     text-decoration: underline;
 }

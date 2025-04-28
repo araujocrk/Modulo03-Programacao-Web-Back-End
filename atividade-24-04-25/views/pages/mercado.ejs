@@ -7,36 +7,35 @@
     <title>Document</title>
 </head>
 <body>
-    <% title = 'Mercado' %>
 
-<h1>Mercado</h1>
-<form action="/operacoes" method="post">
-    <label for="data">Data:</label>
-    <input type="date" id="data" name="data"><br>
+    <h1>Mercado</h1>
+    <form action="/operacoes" method="post">
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data"><br>
 
-    <label for="codigo">Código do Ativo:</label>
-    <select name="codigo" id="codigo">
-        <option value="VALE3">VALE3</option>
-        <option value="PETR4">PETR4</option>
-        <option value="BBAS3">BBAS3</option>
-    </select><br>
+        <label for="codigo">Código do Ativo:</label>
+        <select name="codigo" id="codigo">
+            <option value="VALE3">VALE3</option>
+            <option value="PETR4">PETR4</option>
+            <option value="BBAS3">BBAS3</option>
+        </select><br>
 
-    <label for="tipo">Tipo de Operação:</label>
-    <select name="tipo" id="tipo">
-        <option value="Compra">Compra</option>
-        <option value="Venda">Venda</option>
-    </select><br>
+        <label for="tipo">Tipo de Operação:</label>
+        <select name="tipo" id="tipo">
+            <option value="Compra">Compra</option>
+            <option value="Venda">Venda</option>
+        </select><br>
 
-    <label for="quantidade">Quantidade:</label>
-    <input type="number" id="quantidade" name="quantidade"><br>
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade"><br>
 
-    <label for="precoUnit">Preço Unitário:</label>
-    <input type="number" id="precoUnit" name="precoUnit"><br>
+        <label for="precoUnit">Preço Unitário:</label>
+        <input type="number" id="precoUnit" name="precoUnit"><br>
 
-    <label for="taxas">Taxas B3:</label>
-    <input type="number" id="taxas" name="taxas"><br>
+        <label for="taxas">Taxas B3:</label>
+        <input type="number" id="taxas" name="taxas"><br>
 
-    <button type="submit">Enviar</button>
-</form>
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
