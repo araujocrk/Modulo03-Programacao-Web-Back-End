@@ -1,0 +1,38 @@
+/* Estilizando a Navbar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /* Verde principal */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li a:hover:not(.active) {
+    background-color: #04AA6D; /* Verde mais escuro no hover */
+}
+
+.active {
+    background-color: #04AA6D; /* Mais escuro para ativo */
+}
+
+/* Responsividade opcional */
+@media (max-width: 600px) {
+    li {
+        float: none;
+        text-align: center;
+    }
+}
