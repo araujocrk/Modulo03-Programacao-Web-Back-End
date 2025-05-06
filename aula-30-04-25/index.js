@@ -9,8 +9,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(expressLayouts);
 
-const mainRoute = require('./routes/home');
-app.use('/', mainRoute);
+const homeRoute = require('./routes/home');
+app.use('/', homeRoute);
 
 const operacoesRoute = require('./routes/operacoes');
 app.use('/operacoes', operacoesRoute);

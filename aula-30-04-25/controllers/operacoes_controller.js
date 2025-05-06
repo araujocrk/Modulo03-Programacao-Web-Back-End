@@ -1,8 +1,6 @@
-const express = require('express');
-const router = express.Router();
-
-exports.salvarOperaca
 const operacoes = [];
+
+function  salvarOperacao(req) {
     data = req.body.data;
     codigo = req.body.codigo;
     tipo = req.body.tipo;
@@ -18,5 +16,13 @@ const operacoes = [];
     }
 
     operacoes.push({data, codigo, tipo, quantidade, precoUnit, bruto, taxas, liquido});
+}
 
-module.exports = router;
+function listarOperacoes() {
+    return operacoes;
+}
+
+module.exports = {
+    salvarOperacao,
+    listarOperacoes
+}
