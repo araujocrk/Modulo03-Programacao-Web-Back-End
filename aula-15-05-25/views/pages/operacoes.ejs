@@ -6,37 +6,40 @@
             <th>Tipo de operação</th>
             <th>Quantidade</th>
             <th>Preço unitário</th>
-            <th>Valor Bruno</th>
+            <th>Valor bruto</th>
             <th>Taxas B3</th>
             <th>Valor líquido</th>
         </thead>
         <tbody>
+            <% for (let i = 0; i < operacoes.length; i++) { %>
+                <% operacao = operacoes[i] %>
                 <tr>
                     <td>
-                        01/01/2025
+                        <%= operacao.data %>
                     </td>
                     <td>
-                        ITSA4
+                        <%= operacao.ativo %>
                     </td>
                     <td>
-                       compra
+                        <%= operacao.tipoDeOperacao %>
                     </td>
                     <td>
-                        500
+                        <%= operacao.quantidade %>
                     </td>
                     <td>
-                        10.00
+                        <%= operacao.preco %>
                     </td>
                     <td>
-                        5000.00
+                        <%= operacao.valorBruno %>
                     </td>
                     <td>
-                        1.50
+                        <%= operacao.taxaB3 %>
                     </td>
                     <td>
-                        5001.50
+                        <%= operacao.valorLiquido %>
                     </td>
                 </tr>
+            <% } %>
         </tbody>
     </table>
     <div class="container-botoes">
