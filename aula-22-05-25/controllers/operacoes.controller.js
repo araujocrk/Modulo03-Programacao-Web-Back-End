@@ -1,7 +1,7 @@
 // lista para atuar como base de dados temporária
 const listaDeOperacoes = []
 
-const Operacao = require('../models/operacao')
+const Operacao = require('../models/operacao.model')
 
 exports.save = function (req, res) {
     // Cria uma instância da classe Operacão passando os dados que vem do body

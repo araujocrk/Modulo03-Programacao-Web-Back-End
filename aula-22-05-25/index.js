@@ -3,7 +3,8 @@ const app = express()
 const port = 3000
 
 // roteamentos
-const router = require('./routes/router')
+const mainRoute = require('./routes/main.route')
+const operacoesRoute = require('./routes/operacoes.route')
 
 /* Importa o express-ejs-layouts para o EJS que permite usar layouts
  para reaproveitamento de templates em views EJS */
@@ -30,7 +31,8 @@ o valor verdadeiro indica que o body-parser vai aceitar objetos aninhados ou qua
 */
 app.use(express.urlencoded({ extended: false }))
 
-app.use('/', router)
+app.use('/', mainRoute)
+app.use('/operacoes', operacoesRoute)
 
 app.listen(port, () => {
     console.log(`Example app listening on http://localhost:${port}`)
